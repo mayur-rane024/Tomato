@@ -1,0 +1,70 @@
+.header{
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header_img.png') no-repeat ;
+    position: relative;
+    background-size: contain; 
+       
+}
+/* .header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;  Inherit the background image 
+    filter: blur(100px); Adjust blur strength 
+    z-index: -1; Ensure the blurred background is behind the content 
+} */
+.header-contents{
+    animation: fadeIn 3s ;
+    position :absolute;
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    left:6vw;
+    bottom:10%
+}
+.header-contents h2{
+    font-weight: 500;
+    color:white;
+    font-size: max(4.5vw,22px);
+    /* hi */
+    /* z-index: 1;  */
+}
+.header-contents p{
+    color : white;
+    font-size: 1vw;
+}
+.header-contents button{
+    background-color: #ffffff;
+    color: rgb(93, 89, 89);
+    border: none;
+    padding: 1vw 2.3vw;
+    font-size: 1vw;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+@media (max-width:1050px){
+    .header-contents p{
+        max-width:45%;
+    }
+}
+@media(max-width: 750px){
+   
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        display : none;
+    }
+    .header-contents button{
+        font-size: 2vw 4vw  ;
+    }
+}
+    
