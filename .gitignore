@@ -1,0 +1,10 @@
+.env
+backend/.env
+frontend/dist
+backend/uploads
+node_modules/
+dist/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars

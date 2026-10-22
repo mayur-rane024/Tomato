@@ -1,7 +1,7 @@
 import express from "express"  //npm run server
 import cors from "cors"
 import {connectDB} from "./config/db.js" //***********"db.js" and not "db"
-import foodRouter from "./routes/foodroute.js"
+import foodRouter from "./routes/foodRoute.js"
 import userRouter from "./routes/userRoute.js"
 import "dotenv/config" //this includes env file (setup the environment)
 
@@ -25,7 +25,11 @@ app.use("/images" , express.static('uploads'))
 app.use("/api/user", userRouter)
 
 app.get("/", (req, res) => {
-    res.send("Hello baby");
+    res.send("Hello backend");
+})
+
+app.get("/health", (req, res) => {
+    res.status(200).json({ status: "ok" });
 })
 
 //To run express server
